@@ -1,4 +1,4 @@
-<div class="text-center">
+  <div class="text-center">
   <h2>{{product.title}}</h2>
   <div class="flex-center">
     <quill-view-html [content]="product.photo"></quill-view-html>
@@ -7,5 +7,6 @@
   <h2>Price: {{product.price}} $</h2>
 
   <button class="btn btn-dark" [routerLink]="['/product', product.id]">Open</button>
-  <button class="btn btn-dark" [routerLink]="['/cart']">Add to cart</button>
+<!--  <button class="btn btn-dark" [routerLink]="['/cart']" (click)="addProduct(product)">Add to cart</button>-->
+  <button class="btn btn-dark" (click)="addProduct(product)">Add to cart</button>
 </div>
