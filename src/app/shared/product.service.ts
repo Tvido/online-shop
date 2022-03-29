@@ -9,7 +9,7 @@ import {FbResponse, Product} from "./interfaces";
 })
 export class ProductService {
   type = 'Phone'
-  cartProducts: Product[] = []
+  cartProducts: Product [] = []
 
   constructor(private http: HttpClient) { }
 
@@ -42,9 +42,10 @@ export class ProductService {
     return this.http.get(`${environment.fbDbUri}/products/${id}.json`)
       .pipe(
         map((res: Product) => {
-          return {...res,
-              id,
-              date: new Date(res.date)
+          return {
+            ...res,
+            id,
+            date: new Date(res.date)
             }
         })
       )

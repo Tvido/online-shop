@@ -19,5 +19,4 @@ export class ProductComponent implements OnInit {
   addProduct(product) {
     this.productServ.addProduct(product)
   }
-
 }

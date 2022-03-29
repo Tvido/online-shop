@@ -12,7 +12,6 @@ export class ProductPageComponent implements OnInit {
   product$
 
   constructor(
-
     private productServ: ProductService,
     private route: ActivatedRoute
   ) { }

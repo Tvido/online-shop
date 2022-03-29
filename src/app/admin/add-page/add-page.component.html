@@ -3,43 +3,46 @@
     <h2 class="text-center">Add product</h2>
 
     <div class="form-control">
-        <label for="type">Type</label>
+        <label :for="type">Type</label>
         <select formControlName="type">
             <option value="Phone">Phone</option>
             <option value="Tablet">Tablet</option>
             <option value="Laptop">Laptop</option>
         </select>
+
         <div *ngIf="form.get('type').touched && form.get('type').invalid" class="validation">
             <small *ngIf="form.get('type').errors.required">Chose product type</small>
         </div>
     </div>
+
     <div class="form-control">
         <label for="title">Name</label>
         <input id="title" type="title" formControlName="title">
+
         <div *ngIf="form.get('title').touched && form.get('title').invalid" class="validation">
             <small *ngIf="form.get('title').errors.required">Enter product name</small>
         </div>
     </div>
+
     <div class="form-control">
-        <label for="photo">Photo:</label>
+        <label :for="photo">Photo:</label>
         <quill-editor formControlName="photo"></quill-editor>
-
     </div>
+
     <div class="form-control">
-        <label for="info">Information:</label>
+        <label :for="info">Information:</label>
         <quill-editor formControlName="info"></quill-editor>
-
     </div>
+
     <div class="form-control">
         <label for="price">Price</label>
         <input id="price" type="price" formControlName="price">
+
         <div *ngIf="form.get('price').touched && form.get('price').invalid" class="validation">
             <small *ngIf="form.get('price').errors.required">Enter product price</small>
         </div>
     </div>
 
-
     <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submitted">Add</button>
-
 
 </form>

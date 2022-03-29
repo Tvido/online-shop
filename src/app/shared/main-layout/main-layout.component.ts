@@ -30,5 +30,4 @@ export class MainLayoutComponent implements OnInit {
       this.productServe.setType(this.type)
     }
   }
-
 }

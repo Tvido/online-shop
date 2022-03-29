@@ -15,5 +15,4 @@ export class SearchPipe implements PipeTransform {
       return product.title.toLowerCase().includes(productName.toLowerCase())
     })
   }
-
 }

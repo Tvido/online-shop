@@ -25,7 +25,6 @@ export class AuthService {
     } else {
       localStorage.clear()
     }
-
   }
 
   get token () {

@@ -11,5 +11,4 @@ export class SortingPipe implements PipeTransform {
       return product.type === type
     })
   }
-
 }
